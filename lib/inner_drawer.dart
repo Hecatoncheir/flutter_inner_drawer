@@ -434,7 +434,8 @@ class InnerDrawerState extends State<InnerDrawer>
     final Widget scaffoldChild = Stack(
       children: <Widget?>[widget.scaffold, invC != null ? invC : null]
           .where((a) => a != null)
-          .toList().cast<Widget>(),
+          .toList()
+          .cast<Widget>(),
     );
 
     Widget container = Container(
@@ -582,7 +583,7 @@ class InnerDrawerState extends State<InnerDrawer>
     return Container(
       decoration: widget.backgroundDecoration ??
           BoxDecoration(
-            color: Theme.of(context).backgroundColor,
+            color: Theme.of(context).colorScheme.surface,
           ),
       child: Stack(
         alignment: _drawerInnerAlignment!,

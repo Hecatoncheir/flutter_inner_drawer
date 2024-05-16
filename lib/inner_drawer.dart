@@ -5,9 +5,9 @@
 // https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/drawer.dart
 
 import 'dart:math';
-import 'package:flutter/material.dart';
+
 import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 /// Signature for the callback that's called when a [InnerDrawer] is
 /// opened or closed.
@@ -143,7 +143,7 @@ class InnerDrawerState extends State<InnerDrawer>
 
   double _initWidth = _kWidth;
   Orientation _orientation = Orientation.portrait;
-  InnerDrawerDirection? _position;
+  late InnerDrawerDirection _position;
 
   @override
   void initState() {
